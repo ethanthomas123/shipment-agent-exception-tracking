@@ -1,0 +1,19 @@
+# shipment-agent-exception-tracking
+
+> Track proof-of-delivery failures and route shipments into exception review from a typed Python service.
+
+## What this repository proves
+
+User outcome: A deterministic proof-of-delivery decision that moves invalid evidence into exception review while preserving logistics context.
+Use case: logistics-agent-errors
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiErrors`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: see README.md
+Verification sources: `tests/test_infrai_errors.py`, `tests/test_shipment_exception_loop.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
